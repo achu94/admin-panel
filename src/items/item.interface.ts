@@ -1,20 +1,15 @@
 // src/items/itme.interface.ts
 
-
 export interface BaseItem {
+  name: string;
 
-    name: string;
+  price: number;
 
-    price: number;
+  description: string;
 
-    description: string;
-
-    image: string;
+  image: string;
 }
 
-
-export interface Item extends BaseItem{
-    
-    id: number;
-
+export interface Item extends BaseItem {
+  id: number;
 }
