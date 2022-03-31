@@ -1,4 +1,2 @@
 # admin-panel
-NodeJS-TS AdminPanel
-
-<h1> TS - first touch  </h1>
+ts-first touch -- NodeJS-TS AdminPanel
