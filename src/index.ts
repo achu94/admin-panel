@@ -10,12 +10,16 @@ import { itemsRouter } from "./items/items.router";
 import { errorHandler } from "./middleware/error.middleware";
 import { notFoundHandler } from "./middleware/not-found.middleware";
 
+import { firmaDataRouter } from "./routes/firmaData.router";
+import { connectToDatebase } from "./services/firmaData.service";
+
 /**
  *
  * App Variables
  */
 
 dotenv.config();
+connectToDatebase();
 
 if (!process.env.PORT) {
   process.exit(1);
@@ -32,6 +36,7 @@ app.use(helmet());
 app.use(cors());
 app.use(express.json());
 app.use("/api/menu/items", itemsRouter);
+app.use("/api/admin/firmaData", firmaDataRouter);
 
 app.use(errorHandler);
 app.use(notFoundHandler);
